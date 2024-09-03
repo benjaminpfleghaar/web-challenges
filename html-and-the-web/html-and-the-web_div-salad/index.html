@@ -9,13 +9,15 @@
     <header>
       <h1>Jane Doe</h1>
       <nav>
-        <a href="#" title="About Me">About Me</a>
-        <a href="#" title="Contact">Contact</a>
-        <a href="#" title="Skillset">Skillset</a>
+        <ul>
+          <li><a href="#about-me" title="About Me">About Me</a></li>
+          <li><a href="#skillset" title="Skillset">Skillset</a></li>
+          <li><a href="#contact" title="Contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <article>
+      <article id="about-me">
         <h2>About me</h2>
         <p>
           Hi there! Welcome to my personal website. Here is gathered the most
@@ -31,7 +33,7 @@
         </figure>
       </article>
     </main>
-    <aside>
+    <aside id="skillset">
       <h3>Skillset</h3>
       <ul>
         <li>HTML</li>
@@ -42,11 +44,17 @@
         <li>Party</li>
       </ul>
     </aside>
-    <footer>
+    <footer id="contact">
       <h4>Contact</h4>
-      <a href="https://github.com/neuefische" target="_blank">GitHub</a>
-      <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
-      <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a>
+      <ul>
+        <li>
+          <a href="https://github.com/neuefische" target="_blank">GitHub</a>
+        </li>
+        <li><a href="https://de.linkedin.com/" target="_blank">LinkedIn</a></li>
+        <li>
+          <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>
