@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 40px;
+	margin: 0 auto;
+	max-width: 1200px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main__title {
+	padding: 10px;
+	background: #f3f5f9;
+}
+
+.profile {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.profile__image {
+	height: auto;
+	max-width: 50%;
+	border-radius: 50%;
+	align-self: center;
+}
+
+.tech-stack__list {
+	gap: 10px;
+	display: flex;
+	padding-left: 0;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.tech-stack__list-item {
+	padding: 10px;
+	color: #ffffff;
+	border-radius: 10px;
+	background-color: #252629;
+}
