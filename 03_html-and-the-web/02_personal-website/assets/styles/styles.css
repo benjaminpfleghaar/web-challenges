@@ -18,13 +18,16 @@ footer {
 }
 
 /* Header */
+header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
 header ul {
+	gap: 16px;
+	display: flex;
 	list-style-type: none;
 	padding-inline-start: 0;
-}
-header ul li {
-	margin-right: 8px;
-	display: inline-block;
 }
 header ul li a {
 	color: brown;
@@ -56,27 +59,44 @@ main button {
 	background-color: brown;
 }
 main ul {
-	padding-inline-start: 16px;
+	gap: 8px;
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+main li {
+	padding: 8px;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 4px;
+	background-color: black;
 }
 main figure {
+	gap: 8px;
+	display: flex;
 	margin-block-end: 0;
 	margin-inline-end: 0;
 	margin-block-start: 0;
 	margin-inline-start: 0;
 }
 main img {
-	max-width: 100%;
+	min-width: 0;
 	border-radius: 4px;
 }
 
 /* Footer */
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 footer ul {
+	gap: 16px;
+	display: flex;
 	list-style-type: none;
 	padding-inline-start: 0;
-}
-footer ul li {
-	margin-right: 8px;
-	display: inline-block;
 }
 footer ul li a {
 	color: brown;
