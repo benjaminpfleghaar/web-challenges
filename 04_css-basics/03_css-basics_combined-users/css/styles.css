@@ -29,6 +29,8 @@ aside {
 
 ul {
 	width: max-content;
+	list-style-type: none;
+	padding-inline-start: 0;
 }
 
 li {
