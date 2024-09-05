@@ -41,7 +41,7 @@ main {
 }
 
 .box--top-center {
-	left: 209px;
+	left: calc(100% / 2 - 40px);
 	background-color: #85c1e9;
 }
 
@@ -64,7 +64,7 @@ main {
 
 .box--bottom-center {
 	bottom: 0;
-	left: 209px;
+	left: calc(100% / 2 - 40px);
 	background-color: #21618c;
 }
 
