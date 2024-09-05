@@ -50,12 +50,6 @@ main {
 	background-color: #5dade2;
 }
 
-/* .box--center {
-	top: 259px;
-	left: 209px;
-	background-color: #3498db;
-} */
-
 .box--center {
 	top: calc(100% / 2 - 40px);
 	left: calc(100% / 2 - 40px);
