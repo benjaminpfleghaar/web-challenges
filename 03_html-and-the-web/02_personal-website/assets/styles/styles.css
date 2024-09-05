@@ -1,81 +1,92 @@
+@font-face {
+	font-family: SUSE;
+	src: url(../fonts/SUSE-VariableFont_wght.ttf);
+}
+
 * {
+	margin: 0;
 	box-sizing: border-box;
 }
 body {
-	width: 60vw;
-	margin: 48px auto;
-	font-family: sans-serif;
+	font-size: 100%;
+	font-family: "SUSE";
 }
 
 /* Global */
 
-header,
-main,
-footer {
-	padding: 24px 48px;
-	border-radius: 8px;
-	margin-bottom: 16px;
-	background-color: #f1f1f1;
+p {
+	font-variation-settings: "wght" 200;
+}
+a {
+	color: black;
+	text-decoration: none;
+	font-variation-settings: "wght" 200;
+	transition: font-variation-settings ease 0.2s;
+}
+a:hover {
+	font-variation-settings: "wght" 800;
+}
+img {
+	height: auto;
+	display: block;
+	max-width: 100%;
 }
 
 /* Header */
 
 header {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+	top: 0;
+	padding: 48px;
+	position: sticky;
+	background-color: white;
 }
-header ul {
-	gap: 16px;
+header nav {
+	text-transform: uppercase;
+}
+header nav ul {
+	gap: 24px;
 	display: flex;
 	list-style-type: none;
 	padding-inline-start: 0;
-}
-header ul li a {
-	color: brown;
-	font-weight: bold;
-}
-header ul li a:hover {
-	text-decoration: none;
+	justify-content: space-evenly;
 }
 
 /* Main */
 
 main {
-	padding: 8px 48px;
+	padding: 0 48px 48px;
 }
-main article {
-	padding: 16px 0 24px;
-	border-bottom: 1px solid darkgray;
+
+main h2 {
+	font-size: 2em;
+	margin-bottom: 24px;
 }
-main article:last-child {
-	border: none;
+main p {
+	font-size: 1.25em;
+	line-height: 1.5em;
 }
-main button {
-	border: 0;
-	padding: 8px;
-	color: white;
-	cursor: pointer;
-	font-size: 14px;
-	font-weight: bold;
-	border-radius: 4px;
-	background-color: brown;
-}
-main ul {
-	gap: 8px;
+main section.head {
+	gap: 24px;
 	display: flex;
-	flex-flow: row wrap;
-	list-style-type: none;
-	padding-inline-start: 0;
-}
-main li {
-	padding: 8px;
-	color: white;
-	font-size: 14px;
-	font-weight: bold;
 	border-radius: 4px;
-	background-color: black;
+	margin-bottom: 48px;
+	padding: 16px 16px 16px 24px;
+	border: 1px solid lightgray;
 }
+main section.head h1 {
+	font-size: 4em;
+	margin-bottom: 8px;
+	font-variation-settings: "wght" 800;
+}
+main section.head p {
+	font-size: 2em;
+}
+main section.content {
+	gap: 24px;
+	display: flex;
+	margin-bottom: 48px;
+}
+
 main figure {
 	gap: 8px;
 	display: grid;
@@ -106,23 +117,26 @@ main figure img:nth-child(3) {
 	grid-column: 2 / 3;
 }
 
-/* Footer */
-
-footer {
+/* main section.gallery figure {
+	height: 500px;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	margin-block-end: 0;
+	margin-inline-end: 0;
+	margin-block-start: 0;
+	margin-inline-start: 0;
+	flex-flow: column wrap;
 }
-footer ul {
-	gap: 16px;
-	display: flex;
-	list-style-type: none;
-	padding-inline-start: 0;
+main section.gallery figure img {
+	min-width: 0;
+	object-fit: cover;
+	border-radius: 4px;
 }
-footer ul li a {
-	color: brown;
-	font-weight: bold;
+main section.gallery figure img:nth-child(1) {
+	flex-basis: 100%;
 }
-footer ul li a:hover {
-	text-decoration: none;
+main section.gallery figure img:nth-child(2) {
+	flex-basis: 50%;
 }
+main section.gallery figure img:nth-child(3) {
+	flex-basis: 50%;
+} */
