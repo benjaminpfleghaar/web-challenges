@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	margin-bottom: 45px;
+	flex-direction: column;
+	font-family: system-ui;
+}
+
+/**
+ *
+ * Place the header at the top of the viewport and make sure, that it remains there when the
+ * document is scrolled.
+ */
+.header {
+	top: 0;
+	z-index: 1;
+	height: 80px;
+	padding: 10px;
+	color: #ffffff;
+	position: sticky;
+	background: #140523;
+	box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.header__text {
+	color: #ff4a11;
+}
+
+.header__heading {
+	margin: 0;
+}
+
+/**
+ *
+ * Place the footer at the bottom of the viewport and make sure, that it remains there when the
+ * document is scrolled.
+ */
+.footer {
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	position: fixed;
+	color: #ffffff;
+	background: #140523;
+}
+
+/**
+ *
+ * Define the card as reference frame for descendant elements, that require absolute positioning.
+ */
+.card {
+	padding: 3% 10%;
+	margin: 20px 10%;
+	position: relative;
+	border-radius: 2rem;
+	scroll-margin-top: 100px;
+	border: 5px solid #252629;
+}
+
+.card__heading {
+	margin: 0 0 10px 0;
+}
+
+/**
+ * Place the bookmark in the top, right corner of each card.
+ */
+.card__bookmark {
+	top: 10px;
+	right: 10px;
+	font-size: 2em;
+	padding: 6px 12px;
+	border-radius: 50%;
+	position: absolute;
+	border: 2px solid #ff4a11;
+	box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+/**
+ * The go-to-top button should cover all other elements, so that it is always visible, and
+ * unaffected when the document is scrolled.
+ */
+.goto-top {
+	left: 20px;
+	width: 48px;
+	bottom: 75px;
+	height: 48px;
+	padding: 8px;
+	color: white;
+	display: flex;
+	flex-shrink: 0;
+	position: fixed;
+	border-radius: 50%;
+	align-items: center;
+	background: #ff4a11;
+	text-decoration: none;
+	justify-content: center;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
