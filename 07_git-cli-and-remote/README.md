@@ -53,3 +53,14 @@ How to use version control locally to create repositories and commits and synchr
 | `git clone <url>`                        | Clone remote repository from GitHub              |
 | `git push`                               | Upload content to the remote repository          |
 | `git pull`                               | Download content from the remote repository      |
+
+### Handle `branches`
+
+| Git command                                    | Git task                               |
+| ---------------------------------------------- | -------------------------------------- |
+| `git switch -c <branchname>`                   | Create a new branch and switch to it   |
+| `git switch <branchname>`                      | Switch branches                        |
+| `git branch`                                   | List your branches                     |
+| `git branch -a`                                | List all branches (local and remote)   |
+| `git branch -d <branchname>`                   | Delete a branch                        |
+| `git push --set-upstream origin <branch name>` | Set and push upstream branch on GitHub |
