@@ -49,7 +49,7 @@ How to use version control locally to create repositories and commits and synchr
 | `git restore .`                          | Reset all changes                                |
 | `git restore <filename>`                 | Reset changes for file                           |
 | `git restore --staged <filename>`        | Unstage file                                     |
-| `git restore --staged .`                 | Unstage all files/                               |
+| `git restore --staged .`                 | Unstage all files/folders                        |
 | `git clone <url>`                        | Clone remote repository from GitHub              |
 | `git push`                               | Upload content to the remote repository          |
 | `git pull`                               | Download content from the remote repository      |
