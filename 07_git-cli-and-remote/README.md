@@ -27,14 +27,13 @@ How to use version control locally to create repositories and commits and synchr
 ## Connect local repository to Github
 
 1. Copy repository URL
-2. Connect repository
+2. Connect and push local repository
     ```shell
     git remote add origin <repository URL>
-    ```
-3. Push **main** branch to Github
-    ```shell
+    git branch -M main
     git push -u origin main
     ```
+3. Go to GitHub and hit **Refresh**
 
 ## Commands
 
