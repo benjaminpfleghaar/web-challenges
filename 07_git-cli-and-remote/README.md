@@ -37,27 +37,27 @@ How to use version control locally to create repositories and commits and synchr
 
 ## Git commands
 
-| Git command                                    | Git task                                         |
-| ---------------------------------------------- | ------------------------------------------------ |
-| `git status`                                   | List all files that have changed and their state |
-| `git add <filename>`                           | Add a file to the stage                          |
-| `git add .`                                    | Add all files/folders to the                     |
-| `git commit -m "add foo"`                      | Create a commit including all staged files       |
-| `git remote add origin <repository URL>`       | Connect local respository to GitHub              |
-| `git push -u origin main`                      | Push first commit after connect                  |
-| `git log --oneline`                            | Show the commit history                          |
-| `git restore .`                                | Reset all changes                                |
-| `git restore <filename>`                       | Reset changes for file                           |
-| `git restore --staged <filename>`              | Unstage file                                     |
-| `git restore --staged .`                       | Unstage all files/folders                        |
-| `git clone <url>`                              | Clone remote repository from GitHub              |
-| `git push`                                     | Upload content to the remote repository          |
-| `git pull`                                     | Download content from the remote repository      |
+| Git command                              | Git task                                         |
+| ---------------------------------------- | ------------------------------------------------ |
+| `git status`                             | List all files that have changed and their state |
+| `git add <filename>`                     | Add a file to the stage                          |
+| `git add .`                              | Add all files/folders to the                     |
+| `git commit -m "add foo"`                | Create a commit including all staged files       |
+| `git remote add origin <repository URL>` | Connect local respository to GitHub              |
+| `git push -u origin main`                | Push first commit after connect                  |
+| `git log --oneline`                      | Show the commit history                          |
+| `git restore .`                          | Reset all changes                                |
+| `git restore <filename>`                 | Reset changes for file                           |
+| `git restore --staged <filename>`        | Unstage file                                     |
+| `git restore --staged .`                 | Unstage all files/folders                        |
+| `git clone <url>`                        | Clone remote repository from GitHub              |
+| `git push`                               | Upload content to the remote repository          |
+| `git pull`                               | Download content from the remote repository      |
 
-### Handle branches
+### Handle `branches`
 
 | Git command                                    | Git task                               |
-| -----------------------------------------------| ---------------------------------------|
+| ---------------------------------------------- | -------------------------------------- |
 | `git switch -c <branchname>`                   | Create a new branch and switch to it   |
 | `git switch <branchname>`                      | Switch branches                        |
 | `git branch`                                   | List your branches                     |
