@@ -62,6 +62,7 @@ How to use version control locally to create repositories and commits and synchr
 | `git switch <branchname>`                      | Switch branches                        |
 | `git branch`                                   | List your branches                     |
 | `git branch -a`                                | List all branches (local and remote)   |
-| `git branch -d <branchname>`                   | Delete a branch                        |
-| `git fetch --prune`                            | Delete local branch in VSC             |
 | `git push -u origin <branch name>`             | Push upstream branch on GitHub         |
+| `git fetch --prune`                            | Delete local branch in VSC             |
+| `git push -d <remote_name> <branchname>`       | Delete remote branch                   |
+| `git branch -d <branchname> `                  | Delete local branch                    |
