@@ -7,32 +7,39 @@
 	src: url(../fonts/Inter_24pt-Medium.ttf);
 }
 
+/* Global */
+
 * {
 	margin: 0;
 	box-sizing: border-box;
 }
 body {
+	color: #333;
 	line-height: 1.5;
 	font-family: "Inter Regular";
 }
-
-/* Global */
-
 nav,
 section {
 	margin: 0 auto;
 	max-width: 480px;
 }
 h1 {
-	font-size: 1.5em;
 	font-weight: 500;
 	font-family: "Inter Medium";
 }
 h2 {
-	font-weight: 500;
-	font-size: 1.25em;
+	color: #999;
+	font-size: 1em;
+	font-weight: 400;
 	margin-bottom: 16px;
-	font-family: "Inter Medium";
+	font-family: "Inter Regular";
+}
+ul li a {
+	color: #999;
+	text-decoration: none;
+}
+ul li a:hover {
+	color: #000;
 }
 
 /* Header */
@@ -42,8 +49,9 @@ header {
 	padding: 16px 0;
 	position: sticky;
 	margin-bottom: 64px;
-	background-color: white;
-	border-bottom: 1px solid black;
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid #ddd;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 header nav ul {
 	gap: 16px;
@@ -60,7 +68,7 @@ main section {
 main .about p {
 	padding: 24px;
 	border-radius: 8px;
-	border: 1px solid black;
+	border: 1px solid #ddd;
 }
 main .skills ul {
 	gap: 8px;
@@ -72,7 +80,7 @@ main .skills ul {
 main .skills ul li {
 	padding: 8px 12px;
 	border-radius: 8px;
-	border: 1px solid black;
+	border: 1px solid #ddd;
 }
 main .interests ul {
 	gap: 8px;
@@ -87,19 +95,30 @@ main .interests ul li {
 	display: flex;
 	border-radius: 8px;
 	align-items: center;
-	border: 1px solid black;
+	border: 1px solid #ddd;
 }
 main .interests ul li span {
 	padding: 6px 10px;
 	border-radius: 4px;
-	background-color: #f1f1f1;
+}
+main .interests ul li span.nature {
+	background-color: #ccd3ca;
+}
+main .interests ul li span.music {
+	background-color: #eed3d9;
+}
+main .interests ul li span.coffee {
+	background-color: #f5e8dd;
+}
+main .interests ul li span.bikes {
+	background-color: #b5c0d0;
 }
 
 /* Footer */
 
 footer {
 	padding: 16px 0;
-	border-top: 1px solid black;
+	border-top: 1px solid #ddd;
 }
 footer section {
 	display: flex;
