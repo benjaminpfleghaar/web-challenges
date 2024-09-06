@@ -44,7 +44,7 @@ How to use version control locally to create repositories and commits and synchr
 | `git add .`                              | Add all files/folders to the                     |
 | `git commit -m "add foo"`                | Create a commit including all staged files       |
 | `git remote add origin <repository URL>` | Connect local respository to GitHub              |
-| `git push -u origin main`                | Push first commit after connect                  |
+| `git push -u origin main`                | Push upstream branch on GitHub                   |
 | `git log --oneline`                      | Show the commit history                          |
 | `git restore .`                          | Reset all changes                                |
 | `git restore <filename>`                 | Reset changes for file                           |
@@ -64,4 +64,4 @@ How to use version control locally to create repositories and commits and synchr
 | `git branch -a`                                | List all branches (local and remote)   |
 | `git branch -d <branchname>`                   | Delete a branch                        |
 | `git fetch --prune`                            | Delete local branch in VSC             |
-| `git push --set-upstream origin <branch name>` | Set and push upstream branch on GitHub |
+| `git push -u origin <branch name>`             | Push upstream branch on GitHub         |
