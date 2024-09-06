@@ -41,5 +41,11 @@ How to use version control locally to create repositories and commits and synchr
 | ------------------------- | ------------------------------------------------ |
 | `git status`              | List all files that have changed and their state |
 | `git add <filename>`      | Add a file to the stage                          |
+| `git add .`               | Add all to the stage                             |
 | `git commit -m "add foo"` | Create a commit including all staged files       |
 | `git log --oneline`       | Show the commit history                          |
+| `git restore .`           | Reset all changes                                |
+| `git restore <filename>`  | Reset changes for file                           |
+| `git clone <url>`         | Clone remote repository from GitHub              |
+| `git push`                | Upload content to the remote repository          |
+| `git pull`                | Download content from the remote repository      |
