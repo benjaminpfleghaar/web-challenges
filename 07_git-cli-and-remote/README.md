@@ -35,7 +35,7 @@ How to use version control locally to create repositories and commits and synchr
     ```
 3. Go to GitHub and hit **Refresh**
 
-## Commands
+## Git commands
 
 | Git command                              | Git task                                         |
 | ---------------------------------------- | ------------------------------------------------ |
