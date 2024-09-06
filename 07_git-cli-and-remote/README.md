@@ -57,3 +57,4 @@ How to use version control locally to create repositories and commits and synchr
 | `git switch -c <branch name>`                  | Create and switch to new branch                  |
 | `git branch --all`                             | Show alle branches                               |
 | `git push --set-upstream origin <branch name>` | Set and push upstream branch on GitHub           |
+| `git branch -d <branch name>`                  | Delte branch                                     |
