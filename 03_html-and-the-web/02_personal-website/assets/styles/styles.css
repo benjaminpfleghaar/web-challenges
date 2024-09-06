@@ -82,8 +82,8 @@ main .interests ul {
 	grid-template-columns: repeat(2, 1fr);
 }
 main .interests ul li {
-	gap: 16px;
-	padding: 16px;
+	gap: 12px;
+	padding: 12px;
 	display: flex;
 	border-radius: 8px;
 	align-items: center;
