@@ -1,0 +1,25 @@
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+:root {
+	--body-bg: #ffebcd;
+
+	--header-bg: #201e1d;
+	--header-text: #fab1d9;
+
+	--main-bg: #ffebcd;
+	--main-text: #201e1d;
+	--main-title-bg: #fab1d9;
+
+	--card-bg: #c9f091;
+	--card-text: #201e1d;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	background: var(--body-bg);
+}
