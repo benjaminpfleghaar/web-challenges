@@ -149,6 +149,7 @@ fairly essential to completing this challenge. */
 .card-section {
 	width: 100%;
 	display: flex;
+	padding: 20px;
 	align-items: center;
 	gap: var(--gap);
 	flex-direction: column;
@@ -248,6 +249,7 @@ width, etc. */
 	.card-section {
 		flex-flow: row wrap;
 		align-items: flex-start;
+		justify-content: center;
 	}
 	.product-card {
 		height: 375px;
