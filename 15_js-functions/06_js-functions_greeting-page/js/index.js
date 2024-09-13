@@ -43,9 +43,9 @@ function getDayColor() {
 		return "lightblue";
 	} else if (day === 6 || day === 7) {
 		return "hotpink";
-	} else {
-		return "darkgray";
 	}
+
+	return "darkgray";
 }
 
 display.textContent = getGreeting();
