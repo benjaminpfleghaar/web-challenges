@@ -31,9 +31,9 @@ function getGreeting() {
 		return "Good Afternoon";
 	} else if (time >= 19 && time <= 22) {
 		return "Good Evening";
-	} else {
-		return "Good Night";
 	}
+
+	return "Good Night";
 }
 
 function getDayColor() {
