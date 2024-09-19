@@ -17,7 +17,7 @@ const canvas = document.querySelector('[data-js="canvas"]');
 for (let i = 0; i < pixelValues.length; i++) {
 	for (let j = 0; j < pixelValues[i].length; j++) {
 		const pixel = document.createElement("div");
-		pixel.setAttribute("class", "pixel");
+		pixel.classList.add("class", "pixel");
 		pixel.style.backgroundColor = pixelValues[i][j];
 		canvas.append(pixel);
 	}
