@@ -7,8 +7,13 @@ const errorElement = document.querySelector("[data-js='error']");
 async function fetchUserData(url) {
 	try {
 		const response = await fetch(url);
+		const contentType = response.headers.get("content-type");
 
-		if (!response.ok) throw new Error(response.status);
+		if (!response.ok) throw new Error("User nicht gefunden");
+
+		// Learning: response kann OK sein, selbst wenn der Content Type nicht korrekt ist
+		// daher sind zwei if-Abfragen nötig
+		if (!contentType.includes("json")) throw new Error("Falscher Content Type");
 
 		return await response.json();
 	} catch (error) {
