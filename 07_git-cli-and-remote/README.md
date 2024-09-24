@@ -66,4 +66,3 @@ How to use version control locally to create repositories and commits and synchr
 | `git fetch --prune`                      | Delete local branch in VSC           |
 | `git push -d <remote_name> <branchname>` | Delete remote branch                 |
 | `git branch -d <branchname>`             | Delete local branch                  |
-| `git merge main`                         | Merge main branch into branch        |
