@@ -27,8 +27,6 @@ If there are any differences,
     these changes yet**
 -   you still need to merge these changes manually (using `git pull` or `git merge`).
 
-![git fetch terminal output](assets/git-fetch.png)
-
 > 💡 To see exactly which branches are up to date with origin/main, use `git fetch -v`.
 
 ### `git merge`
@@ -40,8 +38,6 @@ Make sure to
 -   run `git fetch` first if you want to merge a remote branch
 -   switch to the branch where you want to incorporate the changes
 -   run `git merge <branchname>`
-
-![git merge terminal output positive](assets/git-merge.png)
 
 > 💡 Note that `git merge` is a fast-forward merge by default, which means that it will not create a
 > merge commit if the history is clean.
@@ -56,8 +52,6 @@ You can use `git pull` to fetch changes from a remote repository **and** merge t
 branch.
 
 This is possible due to the fact that `git pull` runs `git fetch` and then `git merge`.
-
-![git pull terminal output positive](assets/git-pull.png)
 
 ### `git rebase`
 
@@ -95,8 +89,6 @@ If a merge conflict occurs, you can use VSCode to solve it:
 
 -   go to the `Source Control` Tab of VSCode, and open the file marked with ❗️:
 
-![VSCode choosing changes view](assets/vscode_source-control_conflict.png)
-
 -   choose one option to resolve the merge conflict:
     -   `Accept Current Change`: keep content of the feature branch
     -   `Accept Incoming Change`: keep content of the main branch (because we are merging main into the
@@ -111,8 +103,6 @@ If a merge conflict occurs, you can use VSCode to solve it:
 ### How Common Conflict Emerge
 
 #### Scenario 1: Feature Branch differs from Main Branch
-
-![Conflict Message in GitHub pull request Page](assets/conflicts-message.png)
 
 There are two ways to handle the conflict:
 
@@ -129,8 +119,6 @@ This happens when:
 -   In the meantime, somebody else has committed to the branch you want to pull.
 -   The problem is that git does not know which commit(s) came first.
 
-![git pull aborting](assets/git-pull-aborting.png)
-
 To solve the conflict, follow these steps:
 
 -   `git pull --no-ff`
@@ -138,8 +126,6 @@ To solve the conflict, follow these steps:
     ([see explanation below](git-advanced.md#how-to-solve-conflicts-in-vscode))
 -   `git commit -m "resolve merge conflict"`
 -   `git push`
-
-![git pull --no-ff output](assets/git-pull--no-ff.png)
 
 ---
 
@@ -155,8 +141,6 @@ conflict:
 -   go to feature branch
 -   use `git merge main` to merge the main branch into the feature branch
 -   the terminal will output something like this:
-
-    ![git merge main conflict output in terminal](assets/git-merge-main-conflict.png)
 
 -   resolve the conflict in VSCode
     ([as mentioned above](git-advanced.md#how-to-solve-conflicts-in-vscode))
