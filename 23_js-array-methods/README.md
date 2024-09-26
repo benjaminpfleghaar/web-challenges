@@ -46,8 +46,6 @@ pets.forEach((pet) => {
 
 > ❗️ You **should** use `forEach` to use a side-effect, like `document.createElement`
 
-![array-methods-forEach](./assets/array-methods-forEach.png)
-
 ---
 
 ## `map`
@@ -69,8 +67,6 @@ const uppercasePets = pets.map((pet) => {
 });
 console.log(uppercasePets); // ['BIRD', 'CAT', 'DOG', 'FERRET', 'FISH']
 ```
-
-![array-methods-map](./assets/array-methods-map.png)
 
 > ❗️ The callback function provided to `map` **must** use a `return` statement to return a
 > transformed element. `map` **returns** a new array.
@@ -99,8 +95,6 @@ console.log(petsWithF); // ['ferret', 'fish']
 
 > ❗️ The callback function provided to `filter` **must** use a `return` statement to return a
 > boolean value.
-
-![array-methods-filter](./assets/array-methods-filter.png)
 
 ---
 
