@@ -91,15 +91,15 @@ const mixedArray = ["apple", "banana", "cherry", "date", 42, 7, 1995, 23, true, 
 
 function sum(array) {
 	// TODO:
-	const [first, second, third, fourth] = array;
-	const [, , , , number1, number2, numer3, number4] = array;
-	const [, , , , , , , , boolean1, boolean2] = array;
+	let totalSum = 0;
 
-	const sumStrings = first.length + second.length + third.length + fourth.length;
-	const sumNumbers = number1 + number2 + numer3 + number4;
-	const sumBooleans = (boolean1 && 1) + (!boolean2 && 0);
+	array.map((entry) => {
+		if (typeof entry === "string") totalSum += entry.length;
+		if (typeof entry === "number") totalSum += entry;
+		if (typeof entry === "boolean") totalSum += entry ? 1 : 0;
+	});
 
-	return sumStrings + sumNumbers + sumBooleans;
+	return totalSum;
 }
 
 // Bonus: Write a function that calculates the greatest product of four
