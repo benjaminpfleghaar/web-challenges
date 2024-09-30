@@ -3,20 +3,20 @@
 // If you have a string like aba, then the result should be { 'a': 2, 'b': 1 }.
 // What if the string is empty? Then the result should be empty object literal, {}.
 
-const word = "aabbbcccc";
+const input = "aabbbcccc";
 
-const countCharacters = (...word) => {
+const countCharacters = (...input) => {
 	const characterCount = {};
 
-	word.map((character) => {
+	for (const character of input) {
 		if (characterCount[character]) {
 			characterCount[character] += 1;
 		} else {
 			characterCount[character] = 1;
 		}
-	});
+	}
 
 	return characterCount;
 };
 
-console.log(countCharacters(...word));
+console.log(countCharacters(...input));
