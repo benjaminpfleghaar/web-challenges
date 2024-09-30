@@ -5,10 +5,10 @@
 
 const word = "aabbbcccc";
 
-const countCharacters = (word) => {
+const countCharacters = (...word) => {
 	const characterCount = {};
 
-	[...word].map((character) => {
+	word.map((character) => {
 		if (characterCount[character]) {
 			characterCount[character] += 1;
 		} else {
@@ -19,4 +19,4 @@ const countCharacters = (word) => {
 	return characterCount;
 };
 
-console.log(countCharacters(word));
+console.log(countCharacters(...word));
