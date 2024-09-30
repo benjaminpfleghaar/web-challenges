@@ -60,10 +60,7 @@ const wordsFind = ["machine", "subset", "trouble", "starting", "matter", "eating
 
 function doesWordExist(haystack, needle) {
 	// TODO:
-
-	if (wordsFind.includes(haystack) || wordsFind.includes(needle)) return true;
-
-	return false;
+	return haystack.includes(needle);
 }
 
 // Count repetition
@@ -72,17 +69,13 @@ const wordsCount = ["machine", "matter", "subset", "trouble", "starting", "matte
 
 function howManyTimes(haystack, needle) {
 	// TODO:
-	const wordCount = {};
+	let count = 0;
 
-	for (const word of wordsCount) {
-		if (wordCount[word]) {
-			wordCount[word] += 1;
-		} else {
-			wordCount[word] = 1;
-		}
-	}
+	haystack.forEach((entry) => {
+		if (entry === needle) count++;
+	});
 
-	return wordCount;
+	return count;
 }
 
 // Bonus: A generic sum function
