@@ -133,30 +133,33 @@ function greatestProduct(matrix) {
 	let greatestProduct = 0;
 
 	const checkLine = (x, y) => {
-		let product = 1;
-		for (let i = 0; i < 4; i++) {
-			product *= matrix[x + i][y];
+		if (x <= 4) {
+			let product = 1;
+			for (let i = x; i < x + 4; i++) {
+				product *= matrix[i][y];
+			}
+			if (product > greatestProduct) greatestProduct = product;
 		}
-		if (product > greatestProduct) greatestProduct = product;
 	};
 
 	const checkColumn = (x, y) => {
-		let product = 1;
-		for (let i = 0; i < 4; i++) {
-			product *= matrix[x][y + i];
+		if (y <= 4) {
+			let product = 1;
+			for (let i = y; i < y + 4; i++) {
+				product *= matrix[x][i];
+			}
+			if (product > greatestProduct) greatestProduct = product;
 		}
-		if (product > greatestProduct) greatestProduct = product;
 	};
 
-	for (let x = 0; x < matrix.length - 4; x++) {
-		for (let y = 0; y < matrix.length - 4; y++) {
+	for (let x = 0; x < matrix.length; x++) {
+		for (let y = 0; y < matrix.length; y++) {
 			checkLine(x, y);
 			checkColumn(x, y);
 		}
 	}
 	return greatestProduct;
 }
-console.log(greatestProduct(matrix));
 
 module.exports = {
 	maxOfTwoNumbers,
