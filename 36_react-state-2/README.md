@@ -58,8 +58,6 @@ only child components of the `Article` need to know about the state variable, it
 
 Consider the following example:
 
-<img src="./assets/lifting-state-up.png" width="616" height="694" />
-
 Here we find that a `Link` in the `Navigation` component needs to know about a state that previously
 existed in the `Article` component. We can lift the state up to the `App` component and pass it down
 to the `Article` component as a prop.
