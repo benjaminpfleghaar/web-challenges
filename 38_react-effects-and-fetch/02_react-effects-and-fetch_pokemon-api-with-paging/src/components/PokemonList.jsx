@@ -26,7 +26,7 @@ export default function PokemonList() {
 		if (pokemon.next) setURL(pokemon.next);
 	}
 
-	if (!pokemon.results) return <p>Loading...</p>;
+	if (Object.keys(pokemon).length === 0) return <p>Loading...</p>;
 
 	return (
 		<main>
