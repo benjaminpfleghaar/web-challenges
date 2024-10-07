@@ -14,7 +14,7 @@ export default function App() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			getISSCoords();
-		}, 3000);
+		}, 5000);
 
 		return () => {
 			clearInterval(interval);
