@@ -30,10 +30,10 @@ export default function PokemonList() {
 
 	return (
 		<main>
-			<button type="button" onClick={handlePreviousPage}>
+			<button type="button" onClick={handlePreviousPage} disabled={!pokemon.previous}>
 				Previous Page
 			</button>
-			<button type="button" onClick={handleNextPage}>
+			<button type="button" onClick={handleNextPage} disabled={!pokemon.next}>
 				Next Page
 			</button>
 			<ul>
