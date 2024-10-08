@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { D6Button } from "./components/D6Button";
 import useLocalStorageState from "use-local-storage-state";
 import History from "./components/History";
