@@ -1,9 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { volumes } from "../../../lib/data";
+import { generateLinks } from "../../../lib/utils";
 
 export default function Book() {
   const volume = volumes.find(({ slug }) => slug === "the-return-of-the-king");
+  const index = volumes.findIndex(
+    ({ slug }) => slug === "the-return-of-the-king"
+  );
+
+  const links = generateLinks(index, volumes);
+
   return (
     <>
       <Link href="/volumes" title="All Volumes">
@@ -11,23 +18,20 @@ export default function Book() {
       </Link>
       <h1>{volume.title}</h1>
       <p>{volume.description}</p>
-      <Image
-        src={`/images/${volume.slug}.png`}
-        width={140}
-        height={230}
-        alt="The Fellowship of the Ring"
-      />
+      <Image src={volume.cover} width={140} height={230} alt={volume.title} />
       <h2>All Volumes</h2>
       <ul>
         {volume.books.map((book) => (
-          <li>
+          <li key={book.title}>
             <strong>{book.ordinal}</strong> {book.title}
           </li>
         ))}
       </ul>
-      <Link href="/volumes/the-two-towers" title="The Two Towers">
-        ← The Two Towers
-      </Link>
+      {links.map((link) => (
+        <Link key={link.title} href={link.href} title={link.title}>
+          {link.title}
+        </Link>
+      ))}
     </>
   );
 }
