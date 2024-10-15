@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { volumes, introduction } from "../../lib/data";
 import { useRouter } from "next/router";
 
@@ -7,6 +8,9 @@ export default function Volumes() {
 
 	return (
 		<>
+			<Head>
+				<title>Volumes</title>
+			</Head>
 			<h1>The Lord of the Rings</h1>
 			<p>{introduction}</p>
 			<ul>

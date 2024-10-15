@@ -1,11 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
+import Image from "next/image";
 import { volumes } from "../../lib/data.js";
 import { useRouter } from "next/router.js";
 
 export default function VolumeDetail() {
-	const { query: slug } = useRouter();
-	const volumeIndex = volumes.findIndex(({ slug }) => slug === slug);
+	const { query } = useRouter();
+	const volumeIndex = volumes.findIndex(({ slug }) => slug === query.slug);
 
 	const volume = volumes[volumeIndex];
 	const nextVolume = volumes[volumeIndex + 1];
@@ -19,6 +20,9 @@ export default function VolumeDetail() {
 
 	return (
 		<>
+			<Head>
+				<title>{title}</title>
+			</Head>
 			<Link href="/volumes">← All Volumes</Link>
 			<h1>{title}</h1>
 			<p>{description}</p>
