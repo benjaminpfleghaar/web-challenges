@@ -60,4 +60,4 @@ Always only concentrate on the small step that you are implementing right now. A
 
 > 💡 check this guide out to unlock the power of ChatGPT to help you with problem solving 💪👉😉 [Guide]!
 
-[Guide]: ../self-directed-learning-3/chatgpt-pair-programming.md
+[Guide]: ./01_challenges/README.md
