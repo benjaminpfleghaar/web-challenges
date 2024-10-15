@@ -5,6 +5,14 @@ import HomeLink from "@/components/HomeLink";
 import Paragraph from "@/components/Paragraph";
 import Pagination from "@/components/Pagination";
 
+export function generateMetadata({ params }) {
+	const volume = volumes.find(({ slug }) => slug === params.slug);
+
+	return {
+		title: volume.title,
+	};
+}
+
 export default function Volume({ params }) {
 	const volume = volumes.find(({ slug }) => slug === params.slug);
 	const index = volumes.findIndex((volume) => volume.slug === params.slug);
