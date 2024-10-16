@@ -1,4 +1,5 @@
 import GlobalStyle from "@/libs/styles";
+import StyledComponentsRegistry from "@/libs/registry";
 
 export const metadata = {
 	title: "The Lord of the Rings",
@@ -9,8 +10,10 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<GlobalStyle />
-				{children}
+				<StyledComponentsRegistry>
+					<GlobalStyle />
+					{children}
+				</StyledComponentsRegistry>
 			</body>
 		</html>
 	);
