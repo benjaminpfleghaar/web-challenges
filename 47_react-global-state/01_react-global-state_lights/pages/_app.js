@@ -17,7 +17,7 @@ const initialLights = [
 
 export default function App({ Component, pageProps }) {
 	const [lights, setLights] = useState(initialLights);
-	const isDimmed = lights.every((light) => light.isOn === false);
+	const isDimmed = lights.every(({ isOn }) => !isOn);
 
 	function toggleLight(lightId) {
 		setLights(lights.map((light) => (light.id === lightId ? { ...light, isOn: !light.isOn } : light)));
