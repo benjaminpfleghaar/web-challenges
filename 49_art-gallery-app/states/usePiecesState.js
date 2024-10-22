@@ -8,9 +8,9 @@ export const usePiecesState = create((set) => ({
 		set((state) => ({
 			artPiecesInfo: state.artPiecesInfo.some((piece) => piece.slug === slug) ? state.artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, isFavorite: !piece.isFavorite } : piece)) : [...state.artPiecesInfo, { slug, isFavorite: true, comments: [] }],
 		})),
-	addComment: (slug, comment, date) =>
+	addComment: (slug, comment) =>
 		set((state) => ({
-			artPiecesInfo: state.artPiecesInfo.some((piece) => piece.slug === slug) ? state.artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, comments: [{ comment: comment, date: date }, ...piece.comments] } : piece)) : [...state.artPiecesInfo, { slug, isFavorite: false, comments: [{ comment, date: date }] }],
+			artPiecesInfo: state.artPiecesInfo.some((piece) => piece.slug === slug) ? state.artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, comments: [comment, ...piece.comments] } : piece)) : [...state.artPiecesInfo, { slug, isFavorite: false, comments: [comment] }],
 		})),
 }));
 
@@ -19,7 +19,14 @@ export const usePiecesState = create((set) => ({
 // 	persist(
 // 		(set) => ({
 // 			artPiecesInfo: [],
-// 			setArtPiecesInfo: (newState) => set({ artPiecesInfo: newState }),
+// 			toggleFavorite: (slug) =>
+// 				set((state) => ({
+// 					artPiecesInfo: state.artPiecesInfo.some((piece) => piece.slug === slug) ? state.artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, isFavorite: !piece.isFavorite } : piece)) : [...state.artPiecesInfo, { slug, isFavorite: true, comments: [] }],
+// 				})),
+// 			addComment: (slug, comment) =>
+// 				set((state) => ({
+// 					artPiecesInfo: state.artPiecesInfo.some((piece) => piece.slug === slug) ? state.artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, comments: [comment, ...piece.comments] } : piece)) : [...state.artPiecesInfo, { slug, isFavorite: false, comments: [comment] }],
+// 				})),
 // 		}),
 // 		{
 // 			name: "art-pieces",

@@ -13,7 +13,7 @@ export default function CommentForm({ slug }) {
 		const data = new FormData(e.target);
 		const comment = data.get("comment");
 
-		addComment(slug, comment, getDate());
+		addComment(slug, { comment: comment, date: getDate() });
 
 		e.target.reset();
 	}
