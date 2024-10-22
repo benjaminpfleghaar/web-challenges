@@ -23,11 +23,9 @@ export default function Spotlight() {
 	return (
 		<>
 			<h1 className={styles.headline}>Spotlight</h1>
-			<section className={styles.pieces}>
-				<Link href={`/${slug}`} title={name} className={styles.piece}>
-					<Image src={imageSource} width={width} height={height} alt={name} />
-				</Link>
-			</section>
+			<Link href={`/${slug}`} title={name} className={styles.piece}>
+				<Image src={imageSource} width={width} height={height} alt={name} />
+			</Link>
 			<h3>{name}</h3>
 			<p>{artist}</p>
 		</>
