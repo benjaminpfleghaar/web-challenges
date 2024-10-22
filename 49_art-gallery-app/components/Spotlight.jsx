@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePiecesSWR } from "@/libs/usePiecesSWR";
+import styles from "./Spotlight.module.css";
+import { usePiecesSWR } from "@/states/usePiecesSWR";
 
 export default function Spotlight() {
 	const { pieces, isLoading, isError } = usePiecesSWR();
@@ -21,12 +22,13 @@ export default function Spotlight() {
 
 	return (
 		<>
-			<h1>Spotlight</h1>
-			<hr />
+			<h1 className={styles.headline}>Spotlight</h1>
+			<section className={styles.pieces}>
+				<Link href={`/${slug}`} title={name} className={styles.piece}>
+					<Image src={imageSource} width={width} height={height} alt={name} />
+				</Link>
+			</section>
 			<h3>{name}</h3>
-			<Link href={`/${slug}`} title={name}>
-				<Image src={imageSource} width={width} height={height} alt={name} style={{ height: "auto", maxWidth: "150px" }} />
-			</Link>
 			<p>{artist}</p>
 		</>
 	);

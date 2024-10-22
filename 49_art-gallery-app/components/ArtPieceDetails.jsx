@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Comments from "@/components/Comments";
+import styles from "./ArtPieceDetails.module.css";
 import CommentForm from "@/components/CommentForm";
-import { usePiecesSWR } from "@/libs/usePiecesSWR";
+import { usePiecesSWR } from "@/states/usePiecesSWR";
 import FavoriteButton from "@/components/FavoriteButton";
 
 export default function ArtPieceDetails({ slug }) {
@@ -26,25 +27,25 @@ export default function ArtPieceDetails({ slug }) {
 
 	return (
 		<>
-			<h1>{name}</h1>
-			<hr />
-			<Image src={imageSource} width={width} height={height} alt={name} style={{ height: "auto", maxWidth: "300px" }} />
-			<section>
+			<h1 className={styles.headline}>{name}</h1>
+			<section className={styles.piece}>
+				<FavoriteButton slug={slug} />
+				<Image src={imageSource} width={width} height={height} alt={name} />
+			</section>
+			<section className={styles.colors}>
 				{colors.map((color) => (
-					<span key={color} style={{ backgroundColor: color, width: "60px", height: "60px", display: "inline-block" }}></span>
+					<span key={color} style={{ backgroundColor: color }}></span>
 				))}
 			</section>
-			<ul>
-				<li>{artist}</li>
-				<li>{year}</li>
-				<li>{genre}</li>
-			</ul>
-			<FavoriteButton slug={slug} />
-			<hr />
+			<section className={styles.details}>
+				<h2>{artist}</h2>
+				<p>
+					{genre}, {year}
+				</p>
+			</section>
 			<Comments slug={slug} />
 			<CommentForm slug={slug} />
-			<hr />
-			<button type="button" onClick={() => router.push("/")}>
+			<button type="button" onClick={() => router.push("/")} className={styles.button}>
 				Back to all pieces
 			</button>
 		</>

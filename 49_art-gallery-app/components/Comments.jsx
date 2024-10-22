@@ -1,7 +1,7 @@
 "use client";
 
-import { Fragment } from "react";
-import { usePiecesState } from "@/libs/usePiecesState";
+import styles from "./Comments.module.css";
+import { usePiecesState } from "@/states/usePiecesState";
 
 export default function Comments({ slug }) {
 	const { artPiecesInfo } = usePiecesState();
@@ -9,22 +9,16 @@ export default function Comments({ slug }) {
 
 	return (
 		<>
-			<h2>Comments ({comments.length})</h2>
-			<hr />
-			{comments.length === 0 ? (
-				<h3>No comments</h3>
-			) : (
-				comments.map(({ comment, date }) => (
-					<Fragment key={comment}>
-						<p>
-							{comment}
-							<br />
-							<small>{date}</small>
-						</p>
-						<hr />
-					</Fragment>
-				))
-			)}
+			<h2 className={styles.headline}>Comments ({comments.length})</h2>
+			<section className={styles.comments}>
+				{comments.map(({ comment, date }) => (
+					<section key={comment} className={styles.comment}>
+						{comment}
+						<br />
+						<small>{date}</small>
+					</section>
+				))}
+			</section>
 		</>
 	);
 }

@@ -1,7 +1,8 @@
 "use client";
 
-import { usePiecesSWR } from "@/libs/usePiecesSWR";
-import { usePiecesState } from "@/libs/usePiecesState";
+import styles from "./ArtFavorites.module.css";
+import { usePiecesSWR } from "@/states/usePiecesSWR";
+import { usePiecesState } from "@/states/usePiecesState";
 import ArtPiecePreview from "@/components/ArtPiecePreview";
 
 export default function ArtFavorites() {
@@ -15,16 +16,19 @@ export default function ArtFavorites() {
 
 	return (
 		<>
-			<h1>Favorites ({filteredPieces.length})</h1>
-			<hr />
 			{filteredPieces.length === 0 ? (
-				<h2>No favorites</h2>
+				<h1>No favorites</h1>
 			) : (
-				filteredPieces.map((piece) => (
-					<section key={piece.slug}>
-						<ArtPiecePreview {...piece} />
+				<>
+					<h1 className={styles.headline}>Favorites ({filteredPieces.length})</h1>
+					<section className={styles.pieces}>
+						{filteredPieces.map((piece) => (
+							<article key={piece.slug} className={styles.piece}>
+								<ArtPiecePreview {...piece} />
+							</article>
+						))}
 					</section>
-				))
+				</>
 			)}
 		</>
 	);

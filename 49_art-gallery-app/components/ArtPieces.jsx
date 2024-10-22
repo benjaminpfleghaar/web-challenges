@@ -1,6 +1,7 @@
 "use client";
 
-import { usePiecesSWR } from "@/libs/usePiecesSWR";
+import styles from "./ArtPieces.module.css";
+import { usePiecesSWR } from "@/states/usePiecesSWR";
 import ArtPiecePreview from "@/components/ArtPiecePreview";
 
 export default function ArtPieces() {
@@ -11,13 +12,14 @@ export default function ArtPieces() {
 
 	return (
 		<>
-			<h1>Art pieces</h1>
-			<hr />
-			{pieces.map((piece) => (
-				<section key={piece.slug}>
-					<ArtPiecePreview {...piece} />
-				</section>
-			))}
+			<h1 className={styles.headline}>Art pieces</h1>
+			<section className={styles.pieces}>
+				{pieces.map((piece) => (
+					<article key={piece.slug} className={styles.piece}>
+						<ArtPiecePreview {...piece} />
+					</article>
+				))}
+			</section>
 		</>
 	);
 }

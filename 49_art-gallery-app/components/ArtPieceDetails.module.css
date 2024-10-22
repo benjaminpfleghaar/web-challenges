@@ -1,0 +1,30 @@
+.headline {
+	margin-bottom: 24px;
+}
+.piece {
+	position: relative;
+	margin-bottom: 8px;
+}
+.colors {
+	display: flex;
+	margin-bottom: 24px;
+}
+.colors span {
+	height: 48px;
+	flex-basis: 100%;
+}
+.details {
+	margin-bottom: 24px;
+}
+.button {
+	padding: 8px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #000000;
+}
+.button:focus-visible {
+	outline-offset: 2px;
+	outline: 1px solid #000000;
+}

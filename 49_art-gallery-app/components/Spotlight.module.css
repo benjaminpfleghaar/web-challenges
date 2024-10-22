@@ -1,0 +1,12 @@
+.headline {
+	margin-bottom: 24px;
+}
+.pieces {
+	gap: 16px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.piece {
+	margin-bottom: 8px;
+	display: inline-block;
+}

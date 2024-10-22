@@ -1,0 +1,17 @@
+.button {
+	top: 8px;
+	right: 8px;
+	padding: 8px;
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+	background-color: #ffffff;
+}
+.button_favorite {
+	background-color: #000000;
+}
+.button:focus-visible {
+	outline-offset: 2px;
+	outline: 1px solid #000000;
+}

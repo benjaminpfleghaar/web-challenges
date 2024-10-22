@@ -1,7 +1,8 @@
 "use client";
 
 import getDate from "@/utils/getDate";
-import { usePiecesState } from "@/libs/usePiecesState";
+import styles from "./CommentForm.module.css";
+import { usePiecesState } from "@/states/usePiecesState";
 
 export default function CommentForm({ slug }) {
 	const { artPiecesInfo, setArtPiecesInfo } = usePiecesState();
@@ -22,9 +23,11 @@ export default function CommentForm({ slug }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input type="text" name="comment" required />
-			<button type="submit">Send</button>
+		<form onSubmit={handleSubmit} className={styles.form}>
+			<input type="text" name="comment" required className={styles.input} />
+			<button type="submit" className={styles.button}>
+				Send
+			</button>
 		</form>
 	);
 }

@@ -1,0 +1,14 @@
+.navigation {
+	margin-bottom: 24px;
+}
+.list {
+	gap: 24px;
+	display: flex;
+}
+.link {
+	border-radius: 4px;
+}
+.link:focus-visible {
+	outline-offset: 2px;
+	outline: 1px solid #000000;
+}
