@@ -5,7 +5,7 @@ import styles from "./CommentForm.module.css";
 import { usePiecesState } from "@/states/usePiecesState";
 
 export default function CommentForm({ slug }) {
-	const { artPiecesInfo, setArtPiecesInfo } = usePiecesState();
+	const { artPiecesInfo, addComment } = usePiecesState();
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -13,11 +13,7 @@ export default function CommentForm({ slug }) {
 		const data = new FormData(e.target);
 		const comment = data.get("comment");
 
-		if (artPiecesInfo.some((piece) => piece.slug === slug)) {
-			setArtPiecesInfo(artPiecesInfo.map((piece) => (piece.slug === slug ? { ...piece, comments: [{ comment: comment, date: getDate() }, ...piece.comments] } : piece)));
-		} else {
-			setArtPiecesInfo([...artPiecesInfo, { slug, isFavorite: false, comments: [{ comment, date: getDate() }] }]);
-		}
+		addComment(slug, comment, getDate());
 
 		e.target.reset();
 	}
