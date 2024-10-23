@@ -1,11 +1,11 @@
+"use client";
+
 import useSWR from "swr";
-import { useRouter } from "next/router";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Products() {
-	const router = useRouter();
-	const { data, isLoading } = useSWR(`http://localhost:3000/api/products/${router.query.id}`, fetcher);
+export default function Products({ params }) {
+	const { data, isLoading } = useSWR(`/api/${params.id}`, fetcher);
 
 	if (isLoading) return <h1>Loading...</h1>;
 	if (!data) return null;
