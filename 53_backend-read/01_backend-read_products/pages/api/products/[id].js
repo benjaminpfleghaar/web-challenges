@@ -14,6 +14,7 @@ export default async function handler(request, response) {
 		}
 
 		response.status(200).json(product);
+		return;
 	}
 
 	response.status(405).json({ status: "Method Not Allowed" });
