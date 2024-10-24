@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	color: #000;
+	background-color: #f1f1f1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+main {
+	gap: 24px;
+	display: flex;
+	padding: 48px;
+	max-width: 768px;
+	margin: 48px auto;
+	border-radius: 8px;
+	flex-direction: column;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 #ccc;
+}
+form {
+	gap: 24px;
+	display: flex;
+	flex-direction: column;
+}
+section {
+	gap: 8px;
+	display: flex;
+	flex-direction: column;
+}
+textarea {
+	resize: none;
+	font: inherit;
+	color: inherit;
+	padding: 8px 12px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+textarea:focus-visible {
+	outline-offset: 2px;
+	outline: 1px solid black;
+}
+button {
+	border: none;
+	color: #fff;
+	font: inherit;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 12px 24px;
+	border-radius: 4px;
+	align-self: flex-start;
+	background-color: #000;
+}
+button:focus-visible {
+	outline-offset: 2px;
+	outline: 1px solid black;
+}
